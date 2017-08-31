@@ -1,17 +1,14 @@
+var ops = ["nine", "eight", "seven", "six",
+    "five", "four", "three", "two", "one",
+    "division", "plus", "minus", "zero",
+    "point", "multiply", "equal"];
 function hook(target){
     return document.getElementById(target);
 }
-// get elemenets from dom
-const one = hook(one),
-    two = hook(two),
-    three = hook(three),
-    four = hook(four),
-    five = hook(five),
-    six = hook(six),
-    seven = hook(seven),
-    eight = hook(eight),
-    nine = hook(nine),
-    zero = hook(zero),
-    plus = hook(plus),
-    subt = hook(subt)
-// add event listeners
+//event listeners
+for(var i=0; i<16;i++){
+    hook(ops[i]).addEventListener("click",()=> {update(ops[i])},false);
+}
+function update(targetKey){
+    console.log(targetKey);
+}
