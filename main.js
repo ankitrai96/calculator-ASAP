@@ -1,14 +1,13 @@
-var ops = ["nine", "eight", "seven", "six",
-    "five", "four", "three", "two", "one",
-    "division", "plus", "minus", "zero",
-    "point", "multiply", "equal"];
-function hook(target){
-    return document.getElementById(target);
+var buffer = "";
+function update(keyName){
+    document.getElementById("screen").value += keyName;
 }
-//event listeners
-for(var i=0; i<16;i++){
-    hook(ops[i]).addEventListener("click",()=> {update(ops[i])},false);
+function calc(operation){
+    buffer += document.getElementById("screen").value + operation;
+    document.getElementById("screen").value = "";
 }
-function update(targetKey){
-    console.log(targetKey);
+function result(){
+    buffer += document.getElementById("screen").value;    
+    document.getElementById("screen").value = eval(buffer);
+    buffer = "";
 }

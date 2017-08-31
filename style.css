@@ -48,5 +48,5 @@ input[type="text"]{
     font-weight: bold;
 }
 button:active {
-    transform: translateY(2px);
+    transform: translateY(3px);
   }
