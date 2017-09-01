@@ -2,6 +2,11 @@
     box-sizing: border-box;
     text-align: center;
 }
+body{
+    overflow: hidden;
+    background-color:#444054;
+    color:#fff;
+}
 #container {
     background-color: #FDCA40;
     margin: auto;

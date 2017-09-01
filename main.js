@@ -9,5 +9,12 @@ function calc(operation){
 function result(){
     buffer += document.getElementById("screen").value;    
     document.getElementById("screen").value = eval(buffer);
-    buffer = "";
 }
+// escape for reset
+window.onkeyup = function(e) {
+    var key = e.keyCode ? e.keyCode : e.which;
+    if (key ==27) {
+        buffer = "";
+        document.getElementById("screen").value = "";
+    }
+ }
