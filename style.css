@@ -1,11 +1,13 @@
 * {
     box-sizing: border-box;
     text-align: center;
+    font-family: "helvetica",sans-serif;    
 }
 body{
     overflow: hidden;
     background-color:#444054;
     color:#fff;
+    padding: 10px;
 }
 #container {
     background-color: #FDCA40;
